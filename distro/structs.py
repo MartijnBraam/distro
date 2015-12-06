@@ -4,3 +4,4 @@ class LinuxDistro:
         self.version_number = ""
         self.codename = ""
         self.name = ""
+        self.parent_distro = None
