@@ -20,5 +20,5 @@ d.parent          # None
 Distro        | name    | name_pretty      | codename | codename_pretty | parent
 ------------- | --------|------------------|----------|-----------------|--------
 Debian        | debian  | Debian GNU/Linux | wheezy   | Wheezy          | None
-Raspbian      | raspbian| Raspbian GNU/Linux| wheezy   | wheezy          | &gt;LinuxDistro debian 7&lt;
+Raspbian      | raspbian| Raspbian GNU/Linux| wheezy   | wheezy          | &lt;LinuxDistro debian 7&gt;
 Arch Linux    | arch    | Arch Linux       |          |                 | None
