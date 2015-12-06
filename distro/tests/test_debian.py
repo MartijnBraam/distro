@@ -10,9 +10,12 @@ class TestDebian(TestCase):
         result = parse_os_release(test_data)
         self.assertIsInstance(result, LinuxDistro)
         self.assertEqual(result.name, "debian")
-        self.assertEqual(result.version_number, "8")
+        self.assertEqual(result.name_pretty, "Debian GNU/Linux")
+
         self.assertEqual(result.codename, "jessie"),
-        self.assertEqual(result.pretty_name, "Debian GNU/Linux 8 (jessie)")
+        self.assertEqual(result.codename_pretty, "Jessie"),
+
+        self.assertEqual(result.version_number, "8")
 
     def test_parse_os_release_7(self):
         with open('fixtures/debian/os-release-7') as test_file:
@@ -20,6 +23,9 @@ class TestDebian(TestCase):
         result = parse_os_release(test_data)
         self.assertIsInstance(result, LinuxDistro)
         self.assertEqual(result.name, "debian")
-        self.assertEqual(result.version_number, "7")
+        self.assertEqual(result.name_pretty, "Debian GNU/Linux")
+
         self.assertEqual(result.codename, "wheezy"),
-        self.assertEqual(result.pretty_name, "Debian GNU/Linux 7 (wheezy)")
+        self.assertEqual(result.codename_pretty, "Wheezy"),
+
+        self.assertEqual(result.version_number, "7")

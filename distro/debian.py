@@ -29,10 +29,14 @@ def parse_os_release(contents):
     config.read_string(valid_config)
 
     dist = LinuxDistro()
-    dist.pretty_name = strip_quotes(config['debian']['PRETTY_NAME'])
     dist.version_number = strip_quotes(config['debian']['VERSION_ID'])
+
     dist.name = config['debian']['ID']
+    dist.name_pretty = strip_quotes(config['debian']['NAME'])
+
     dist.codename = get_codename(dist.version_number)
+    dist.codename_pretty = dist.codename.title()
+
     dist.homepage = strip_quotes(config['debian']['HOME_URL'])
     return dist
 
