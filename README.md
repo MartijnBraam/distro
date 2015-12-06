@@ -21,4 +21,5 @@ Distro        | name    | name_pretty      | codename | codename_pretty | parent
 ------------- | --------|------------------|----------|-----------------|--------
 Debian        | debian  | Debian GNU/Linux | wheezy   | Wheezy          | None
 Raspbian      | raspbian| Raspbian GNU/Linux| wheezy   | wheezy          | &lt;LinuxDistro debian 7&gt;
+Ubuntu        | ubuntu  | Ubuntu           | trusty | Trusty Tahr       | &lt;LinuxDistro debian &gt;
 Arch Linux    | arch    | Arch Linux       |          |                 | None
