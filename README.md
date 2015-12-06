@@ -12,4 +12,12 @@ d.name_pretty     # Debian GNU/Linux
 d.codename        # wheezy
 d.codename_pretty # Wheezy
 d.version_number  # 7
+d.parent          # None
 ```
+
+## Output for various distros
+
+Distro        | name    | name_pretty      | codename | codename_pretty | parent
+------------- | --------|------------------|----------|-----------------|--------
+Debian        | debian  | Debian GNU/Linux | wheezy   | Wheezy          | None
+Arch Linux    | arch    | Arch Linux       |          |                 | None

@@ -15,6 +15,9 @@ def identify():
     with open(hit) as release_file:
         release_file_contents = release_file.read()
 
+    if "debian" not in release_file_contents:
+        return False
+
     if hit == "/etc/os-release":
         return parse_os_release(release_file_contents)
     elif hit == "/etc/debian_release":
