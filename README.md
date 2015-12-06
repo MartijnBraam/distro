@@ -2,6 +2,12 @@
 
 A python module to get information about the current Linux distribution.
 
+## Installation
+
+``bash
+$ pip install distro
+``
+
 ## Usage
 
 ```python
