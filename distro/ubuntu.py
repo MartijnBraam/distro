@@ -61,7 +61,19 @@ def strip_quotes(value):
 
 def get_codename(version):
     version_dict = {
+        "10.04": ("lucid", "Lucid Lynx"),
+        "10.10": ("maverick", "Maverick Meerkat"),
+        "11.04": ("natty", "Natty Narwhal"),
+        "11.10": ("oneiric", "Oneiric Ocleot"),
+        "12.04": ("precise", "Precise Pangolin"),
+        "12.10": ("quantal", "Quantal Quetzal"),
+        "13.04": ("raring", "Raring Ringtail"),
+        "13.10": ("saucy", "Saucy Salamander"),
         "14.04": ("trusty", "Trusty Tahr"),
+        "14.10": ("utopic", "Utopic Unicorn"),
+        "15.04": ("vivid", "Vivid Vervet"),
+        "15.10": ("wily", "Wily Werewolf"),
+        "16.04": ("xenial", "Xenial Xerus")
     }
     if version in version_dict:
         return version_dict[version]
