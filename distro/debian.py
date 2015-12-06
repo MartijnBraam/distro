@@ -70,7 +70,8 @@ def get_codename(version):
         5: "lenny",
         6: "squeeze",
         7: "wheezy",
-        8: "jessie"
+        8: "jessie",
+        9: "stretch"
     }
     if version in version_dict:
         return version_dict[version]

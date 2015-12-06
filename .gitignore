@@ -1,2 +1,5 @@
 # Python virtualenv
 /venv
+
+*.pyc
+*.pyo
