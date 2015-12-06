@@ -1,6 +1,7 @@
 import os
 import configparser
 from distro.structs import LinuxDistro
+import copy
 
 
 def identify():
@@ -41,6 +42,12 @@ def parse_os_release(contents):
     dist.codename_pretty = dist.codename.title()
 
     dist.homepage = strip_quotes(config['debian']['HOME_URL'])
+
+    if dist.name == "raspbian":
+        parent_dist = copy.copy(dist)
+        parent_dist.name = "debian"
+        parent_dist.name_pretty = "Debian GNU/Linux"
+        dist.parent = parent_dist
     return dist
 
 
