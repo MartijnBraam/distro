@@ -38,12 +38,14 @@ COMMAND_PACKAGE_APT = {
     'install': 'apt-get install {}',
     'uninstall': 'apt-get remove {}',
     'purge': 'apt-get purge {}',
-    'search': 'apt-cache search {}'
+    'search': 'apt-cache search {}',
+    'is-installed': 'dpkg -s {}'
 }
 
 COMMAND_PACKAGE_PACMAN = {
     'install': 'pacman -S {}',
     'uninstall': 'pacman -Rs {}',
     'purge': 'pacman -Rsn {}',
-    'search': 'pkgfile -Qs {}'
+    'search': 'pkgfile {}',
+    'is-installed': 'pacman -Q {}'
 }
