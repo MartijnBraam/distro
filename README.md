@@ -19,6 +19,12 @@ d.codename        # wheezy
 d.codename_pretty # Wheezy
 d.version_number  # 7
 d.parent          # None
+
+d.command['service']['start']
+# service {} start
+
+d.command['package']['install']
+# apt-get install {}
 ```
 
 ## Output for various distros

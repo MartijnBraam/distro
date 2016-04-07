@@ -1,6 +1,6 @@
 import os
 import configparser
-from distro.structs import LinuxDistro
+from distro.structs import *
 import copy
 
 
@@ -48,6 +48,13 @@ def parse_os_release(contents):
         parent_dist.name = "debian"
         parent_dist.name_pretty = "Debian GNU/Linux"
         dist.parent = parent_dist
+
+    if dist.version_number < 8:
+        dist.command['service'] = COMMAND_SERVICE_SYSV
+    else:
+        dist.command['service'] = COMMAND_SERVICE_SYSTEMD
+
+    dist.command['package'] = COMMAND_PACKAGE_APT
     return dist
 
 

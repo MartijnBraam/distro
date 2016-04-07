@@ -1,5 +1,5 @@
 import os
-from distro.structs import LinuxDistro
+from distro.structs import *
 
 
 def identify():
@@ -15,6 +15,8 @@ def identify():
     result = LinuxDistro()
     result.name = "arch"
     result.name_pretty = "Arch Linux"
+    result.command['service'] = COMMAND_SERVICE_SYSTEMD
+    result.command['package'] = COMMAND_PACKAGE_PACMAN
 
     # Arch doesn't have more information
 
