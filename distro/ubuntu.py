@@ -2,21 +2,27 @@ import os
 import configparser
 from distro.structs import *
 import copy
+import logging
 
 
 def identify():
+    logging.debug('Trying to identify Ubuntu')
     possible_files = ['/etc/os-release']
     hit = ""
     for file in possible_files:
         if os.path.isfile(file):
             hit = file
     if hit == "":
+        logging.debug('/etc/os-release not found')
         return False
+
+    logging.debug('Found Ubuntu release file: {}'.format(hit))
 
     with open(hit) as release_file:
         release_file_contents = release_file.read()
 
     if "ubuntu" not in release_file_contents:
+        logging.debug('Release file does not contain string "ubuntu"')
         return False
 
     if hit == "/etc/os-release":
