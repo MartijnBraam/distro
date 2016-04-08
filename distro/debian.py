@@ -12,6 +12,7 @@ def identify():
     for file in possible_files:
         if os.path.isfile(file):
             hit = file
+            break
     if hit == "":
         logging.debug('No debian release file found')
         return False
