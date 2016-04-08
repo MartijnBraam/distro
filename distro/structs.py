@@ -35,17 +35,17 @@ COMMAND_SERVICE_SYSV = {
 }
 
 COMMAND_PACKAGE_APT = {
-    'install': 'apt-get install {}',
-    'uninstall': 'apt-get remove {}',
-    'purge': 'apt-get purge {}',
+    'install': 'apt-get -y install --no-install-recommends {}',
+    'uninstall': 'apt-get -y remove {}',
+    'purge': 'apt-get -y purge {}',
     'search': 'apt-cache search {}',
     'is-installed': 'dpkg -s {}'
 }
 
 COMMAND_PACKAGE_PACMAN = {
-    'install': 'pacman -S {}',
-    'uninstall': 'pacman -Rs {}',
-    'purge': 'pacman -Rsn {}',
+    'install': 'pacman -S --noconfirm {}',
+    'uninstall': 'pacman -Rs --noconfirm {}',
+    'purge': 'pacman -Rsn --noconfirm {}',
     'search': 'pkgfile {}',
     'is-installed': 'pacman -Q {}'
 }
