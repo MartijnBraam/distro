@@ -59,7 +59,7 @@ def parse_os_release(contents):
         parent_dist.name_pretty = "Debian GNU/Linux"
         dist.parent = parent_dist
 
-    if dist.version_number < 8:
+    if int(dist.version_number) < 8:
         dist.command['service'] = COMMAND_SERVICE_SYSV
     else:
         dist.command['service'] = COMMAND_SERVICE_SYSTEMD
